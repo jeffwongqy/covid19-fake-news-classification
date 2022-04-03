@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Outcome</title>
+    </head>
+    <body>
+        <header>
+            <div class = "container" style = "text-align: center">
+                <div id = "brandname">
+                    <h2 style = "font-family: Arial; font-size:32px; color: limegreen">Machine Learning on COVID-19 Fake News/Tweets Detection </h2>
+                </div>
+                <hr style = "height: 2px; width: 1000px; background-color: skyblue">
+                <h2 style = "font-family: Arial; font-size: 30px">COVID-19 Fake News/Tweets Detection</h2>
+            </div>
+        </header>
+        
+        <div class = "ml-outcome" style = "text-align: center">
+            <!-- display the raw text -->
+            <h3 style = "font-family: Arial; font-size: 20px; color: navy">Raw Text: </h3>
+            <p style = "text-align: justify; margin-left:300px; margin-right: 300px; font-family: Arial">{{rawText}}</p>
+            
+            <br>
+            <!-- display the normalized text -->
+            <h3 style = "font-family: Arial; font-size : 20px; color: tomato">Normalized Text: </h3>
+            <p style = "text-align: justify; margin-left: 300px; margin-right: 300px; font-family: Arial">{{normalizedText}}</p>
+            
+            <br>
+            <!-- display the prediction outcome -->
+            <h3 style = "font-family: Arial; font-size: 20px; color: skyblue">Prediction Outcome: </h3>
+            
+            <div style = "margin-left: 300px; margin-right: 300px; font-family: Arial">
+                {% if prediction == 1 %}
+                <p>The COVID-19 News is real.</p>
+                {% else %}
+                <p>The COVID-19 News is fake.</p>
+                {% endif %}
+            </div>
+            <br>
+            
+            <!-- prompt the user would like to return to the main page -->
+            <a href = "http://127.0.0.1:5000/"><input type = "submit" value = "return"></a>
+            
+            
+        </div>
+    </body>
+</html>

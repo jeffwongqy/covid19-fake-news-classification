@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <header>
+            <div class = "container" style = "text-align: center">
+                <div id = "brandname">
+                    <h2 style = "font-family: Arial; font-size:32px; color: limegreen">Machine Learning on COVID-19 Fake News/Tweets Detection </h2>
+                </div>
+                <hr style = "height: 2px; width: 1000px; background-color: skyblue">
+                <h2 style = "font-family: Arial; font-size: 30px">COVID-19 Fake News/Tweets Detection</h2>
+                
+            </div>
+            
+        </header>
+        
+        <div class = "ml-container" style = "text-align: center" >
+            <form action = "{{url_for('predict')}}"  method = "POST">
+                <!-- prompt the user to choose the machine learning model -->
+                <label for = "ml" style = "font-family: Arial">Choose a Machine Learning model:</label>
+                <select name = "ml" id = "ml" autofocus required>
+                    <option value = "">None</option>
+                    <option value = "mnb">Multinomial NB</option>
+                    <option value = "lr">Logistic Regression</option>
+                    <option value = "rfc">Random Forest Classifier</option>
+                </select>
+                <br>
+                <br>
+                <!-- prompt the user to input text -->
+                <label for = "textNews" style = "font-family: Arial">Enter your text here: </label>
+                <br>
+                <br>
+                <textarea  id = "textNews" name = "news" rows="4" cols="100" resize = None placeholder="Enter your COVID-19 News here..." autofocus required></textarea>
+                <br>
+                <br>
+                <input type = "submit" class = "btn-info" value = "Predict">
+                <input type = "reset" value = "Reset">
+                
+                
+            </form>
+            
+            
+        </div>
+    </body>
+</html>

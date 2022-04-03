@@ -1,1 +1,1 @@
-# covid19-fake-news-classification
+# COVID-19 Fake News Classification

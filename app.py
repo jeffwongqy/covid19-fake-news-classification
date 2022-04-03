@@ -71,7 +71,7 @@ def predict():
         return render_template('outcome.html', rawText = textNews, normalizedText = cleanedText, prediction = predict)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
     
     
     
